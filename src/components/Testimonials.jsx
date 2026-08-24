@@ -66,7 +66,7 @@ const Testimonials = () => {
       <div className="container">
         <h2>Words from the Champions</h2>
         <p style={{ textAlign: 'center', color: 'var(--color-text-muted)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
-          Real legacy isn't written on an association letterhead—it is spoken by the players whose lives were changed on the court.
+          Real legacy isn't written on any letterhead—it is spoken by the players whose lives were changed on the court.
         </p>
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
