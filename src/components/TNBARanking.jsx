@@ -40,7 +40,7 @@ const TNBARanking = () => {
       <div className="container">
         <h2>TNBA Ranking Achievers</h2>
         <p style={{ textAlign: 'center', color: 'var(--color-text-muted)', maxWidth: '640px', margin: '0 auto 3rem auto' }}>
-          These are the players from Fazal's Badminton Academy who earned official rankings in Tamil Nadu Badminton Association tournaments — a journey that began long before Mayiladuthurai even had a local association.
+          These are the players from Fazal's Badminton Academy who earned official rankings in Tamil Nadu Badminton Association tournaments — a journey that began long before Mayiladuthurai even became a seperate district.
         </p>
 
         {/* Banner Strip */}
@@ -56,7 +56,7 @@ const TNBARanking = () => {
         }}>
           <span style={{ fontSize: '2rem' }}>🏸</span>
           <p style={{ margin: 0, color: 'var(--color-primary)', fontWeight: '600', fontSize: '1rem' }}>
-            Coach Fazal's students were competing in TNBA Ranking tournaments via Nagapattinam — years before the Badminton Association of Mayiladuthurai was even established.
+            Coach Fazal's students were competing in TNBA Ranking tournaments via Nagapattinam — years before Mayiladuthurai was even established as a seperate district.
           </p>
         </div>
 
