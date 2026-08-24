@@ -119,7 +119,7 @@ const TNBARanking = () => {
         {/* Footer Note */}
         <div style={{ textAlign: 'center', marginTop: '3rem' }}>
           <p style={{ color: 'var(--color-text-muted)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-            * Player names and categories are managed via the Admin Dashboard. Update them with the actual ranking details.
+            
           </p>
         </div>
       </div>
