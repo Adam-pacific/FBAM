@@ -42,9 +42,9 @@ const UniversityAchievers = () => {
         {loading ? (
           <p style={{ textAlign: 'center', color: 'var(--color-text-muted)' }}>Loading achievers...</p>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
             {players.map((p, index) => (
-              <div key={p.id} className="glass-panel" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
+              <div key={p.id} className="glass-panel" style={{ padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column', flex: '1 1 320px', maxWidth: '400px' }}>
                 {/* Photo Section */}
                 {p.photoUrl ? (
                   <img

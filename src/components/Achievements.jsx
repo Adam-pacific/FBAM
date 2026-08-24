@@ -43,9 +43,9 @@ const Achievements = () => {
         {loading ? (
           <p style={{ textAlign: 'center', color: 'var(--color-text-muted)' }}>Loading champions...</p>
         ) : (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
             {achievements.map((item) => (
-              <div key={item.id} className="glass-panel" style={{ overflow: 'hidden' }}>
+              <div key={item.id} className="glass-panel" style={{ overflow: 'hidden', flex: '1 1 320px', maxWidth: '400px' }}>
                 {item.imageUrl ? (
                   <img src={item.imageUrl} alt={item.studentName} style={{ width: '100%', height: '250px', objectFit: 'cover' }} />
                 ) : (
