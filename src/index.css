@@ -1,0 +1,285 @@
+:root {
+  /* Dark Theme (default) */
+  --color-bg: #1c1c1e;
+  --color-surface: #2a2a2e;
+  --color-surface-light: #38383d;
+  --color-primary: #b8941e;       /* Deep Champion Gold - darker for dark bg */
+  --color-primary-light: #F3E5AB;
+  --color-text: #ffffff;
+  --color-text-muted: #d4ccb9;
+  --color-border: #4a4a52;
+  --color-nav-bg: rgba(28, 28, 30, 0.92);
+  --color-hero-gradient: rgba(184, 148, 30, 0.1);
+  --color-glass: rgba(20, 20, 20, 0.7);
+
+  --font-primary: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+}
+
+/* Light Theme — White, Blue & Black */
+[data-theme="light"] {
+  --color-bg: #f0f4ff;
+  --color-surface: #ffffff;
+  --color-surface-light: #e4ecff;
+  --color-primary: #1a56db;          /* Royal Blue */
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #0f3599;
+  --color-text: #000000;
+  --color-text-muted: #2c3a52;
+  --color-border: #c3d4f5;
+  --color-nav-bg: rgba(255, 255, 255, 0.97);
+  --color-hero-gradient: rgba(26, 86, 219, 0.09);
+  --color-glass: rgba(255, 255, 255, 0.90);
+  --color-accent-strip: linear-gradient(135deg, #1a56db 0%, #0f3599 100%);
+}
+
+/* Light theme — hero headline in blue/black */
+[data-theme="light"] .hero h1 {
+  background: linear-gradient(135deg, #1a56db 0%, #0d0d0d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Light theme — nav logo in blue */
+[data-theme="light"] .nav-logo {
+  color: #1a56db;
+}
+
+/* Light theme — nav links in black */
+[data-theme="light"] .nav-links a {
+  color: #0d0d0d;
+}
+[data-theme="light"] .nav-links a:hover {
+  color: #1a56db;
+}
+
+/* Light theme — section headings in blue */
+[data-theme="light"] section h2 {
+  color: #1a56db;
+}
+
+/* Light theme — btn-primary blue */
+[data-theme="light"] .btn-primary {
+  background: linear-gradient(135deg, #1a56db, #0f3599);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.35);
+}
+[data-theme="light"] .btn-primary:hover {
+  background: linear-gradient(135deg, #3b82f6, #1a56db);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(26, 86, 219, 0.5);
+}
+
+/* Light theme — glass panels with blue tint border */
+[data-theme="light"] .glass-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(26, 86, 219, 0.18);
+  box-shadow: 0 4px 20px rgba(26, 86, 219, 0.07);
+}
+
+/* Light theme — hero radial bg */
+[data-theme="light"] .hero {
+  background: radial-gradient(circle at 50% 40%, rgba(26, 86, 219, 0.12) 0%, #f0f4ff 65%);
+}
+
+/* Light theme — sections alternate bg */
+[data-theme="light"] section:nth-child(even) {
+  background: #e8efff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: var(--color-glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+/* Button utility */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #000;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+  color: #000;
+}
+
+/* Micro-animations */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1); opacity: 0.5; }
+  50%  { transform: scale(1.08); opacity: 0.15; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  padding-top: 120px; /* Accounts for the fixed navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at center, var(--color-hero-gradient) 0%, var(--color-bg) 70%);
+  transition: background 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-nav-bg);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--color-primary);
+}
+
+/* Admin Dashboard Specific */
+.admin-container {
+  padding-top: 100px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-family: var(--font-primary);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
