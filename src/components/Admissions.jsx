@@ -24,7 +24,9 @@ const Admissions = () => {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ color: 'var(--color-primary)', fontWeight: 'bold' }}>Location:</span>
-              <span>Prahadeesh Feathers, Mayiladuthurai</span>
+              <a href="https://maps.app.goo.gl/bu7bHvD1q3anpoKB7" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-text)', textDecoration: 'underline' }}>
+                Prahadeesh Feathers, Mayiladuthurai
+              </a>
             </div>
           </div>
         </div>
