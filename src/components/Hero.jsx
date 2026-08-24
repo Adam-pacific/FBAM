@@ -22,6 +22,7 @@ const Hero = () => {
           <img 
             src="/logo.png" 
             alt="Fazal's Badminton Academy Logo" 
+            className="hero-logo"
             style={{ 
               width: '260px', 
               height: '260px', 
